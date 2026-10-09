@@ -18,7 +18,7 @@ platforms;android-35, build-tools;35.0.0.
 
 Задайте JAVA_HOME и ANDROID_SDK_ROOT, затем запустите `python build.py`.
 Скрипт предназначен для Windows и использует aapt2, javac, D8, zipalign,
-apksigner. Он создаёт подписанный APK в build/release/School-Note-1.1.0.apk.
+apksigner. Он создаёт подписанный APK в build/release/School-Note-1.1.1.apk.
 Ключ подписи создаётся в соседней папке signing; храните его для обновлений.
 Приложение не собирается в debug-режиме.
 
@@ -26,3 +26,5 @@ apksigner. Он создаёт подписанный APK в build/release/Schoo
 Установите оба APK на тестовый эмулятор и выполните:
 `adb shell am instrument -w kz.school.journal.tests/kz.school.journal.JournalTests`.
 Проверки используют тестовые данные и очищают журнал на тестовом устройстве.
+
+Сделано Айқожа Умар. Надпись находится в настройках приложения.

@@ -38,7 +38,7 @@ def package(test=False):
     with zipfile.ZipFile(b/'unsigned.apk','a',compression=zipfile.ZIP_DEFLATED) as z:
         for f in dex.glob('*.dex'):z.write(f,f.name)
     run(BT/'zipalign.exe','-f','4',b/'unsigned.apk',b/'aligned.apk')
-    output=b/('journal-tests.apk' if test else 'School-Note-1.1.0.apk')
+    output=b/('journal-tests.apk' if test else 'School-Note-1.1.1.apk')
     run(JAVA/'bin/java.exe','-jar',BT/'lib/apksigner.jar','sign','--ks',KEY,'--ks-key-alias','journal','--ks-pass','file:'+str(PASSWORD),'--out',output,b/'aligned.apk')
     run(JAVA/'bin/java.exe','-jar',BT/'lib/apksigner.jar','verify','--verbose',output)
     run(BT/'zipalign.exe','-c','4',output)
