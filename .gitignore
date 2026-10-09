@@ -1,0 +1,10 @@
+android/build/
+signing/
+*.jks
+*.keystore
+password.txt
+.env
+.env.*
+__pycache__/
+*.pyc
+website/downloads/
